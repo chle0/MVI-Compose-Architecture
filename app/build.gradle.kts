@@ -6,9 +6,7 @@ plugins {
 android {
     namespace = "com.ahmad.raza.mvicomposearchitecture"
     compileSdk {
-        version = release(36) {
-            minorApiLevel = 1
-        }
+        version = release(37)
     }
 
     defaultConfig {
@@ -47,10 +45,17 @@ dependencies {
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
     testImplementation(libs.junit)
-    androidTestImplementation(platform(libs.androidx.compose.bom))
     androidTestImplementation(libs.androidx.compose.ui.test.junit4)
     androidTestImplementation(libs.androidx.espresso.core)
     androidTestImplementation(libs.androidx.junit)
     debugImplementation(libs.androidx.compose.ui.test.manifest)
     debugImplementation(libs.androidx.compose.ui.tooling)
+    //Adding some Dependencies
+    implementation(libs.lifecycle.extensions)
+    implementation(libs.retrofit)
+    implementation(libs.converter.gson)
+    implementation(libs.kotlinx.coroutines.android)
+    implementation(libs.kotlinx.coroutines.core)
+    implementation(libs.coil.compose)
+    implementation(libs.androidx.lifecycle.viewmodel.compose)
 }
